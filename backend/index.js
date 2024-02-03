@@ -3,6 +3,8 @@ const cors = require('cors')
 const {ApolloServer} = require('@apollo/server')
 const typeDefs = require('./graphql/schema');
 const userResolvers = require('./resolvers/userResolver');
+const itemsResolvers = require('./resolvers/itemResolver')
+const orderResolvers = require('./resolvers/orderResolver')
 const {startStandaloneServer} = require('@apollo/server/standalone')
 // const User = require('./models/user.model')
 
@@ -17,9 +19,19 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 const resolvers = {
-    ...userResolvers
-}
-
+    Query: {
+      ...userResolvers.Query,
+      ...itemsResolvers.Query,
+      ...orderResolvers.Query
+      // Add other Query resolvers as needed
+    },
+    Mutation: {
+      ...userResolvers.Mutation,
+      ...itemsResolvers.Mutation,
+      ...orderResolvers.Mutation
+      // Add other Mutation resolvers as needed
+    },
+  };
 
 
 
