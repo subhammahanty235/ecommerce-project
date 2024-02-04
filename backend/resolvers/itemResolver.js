@@ -3,6 +3,7 @@ const Item = require('../models/items.model')
 const itemsResolvers = {
     Query: {
         getAllItems: async () => {
+            console.log("getting...")
             try {
                 const items = await Item.find({});
                 return items;

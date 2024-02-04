@@ -1,0 +1,39 @@
+// src/components/Signup.scss
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80vw;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 40px;
+    
+    .header_cna{
+        color:#646cff !important;
+    }
+    .signup_form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        input{
+            padding: 7px 10px;
+            width: 300px;
+            font-size: large;
+            border: 1px solid #242424;
+            background-color: transparent;
+            color: #242424;
+        }
+    }
+
+    button{
+        padding: 5px 15px;
+        margin-top: 20px;
+    }
+    p{
+        color: #242424;
+        cursor: pointer;
+    }
+}
