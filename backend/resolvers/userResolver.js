@@ -42,7 +42,7 @@ const userResolvers = {
         signup: async(_ , args) => {
             console.log("iuyuyuyiuyiy")
             try {
-                // console.log("fhuerfhiuegheiufiufj")
+                
                 // console.log(args.name);
                 // console.log(args.email)
                 const existingUser = await User.findOne({email:args.user.email});

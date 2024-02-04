@@ -9,7 +9,7 @@ const orderResolvers = {
                 const orders = await Orders.aggregate([
                     {
                         $lookup: {
-                            from: 'users', // name of the User collection in your database
+                            from: 'users', 
                             localField: 'userId',
                             foreignField: '_id',
                             as: 'user',
@@ -17,7 +17,7 @@ const orderResolvers = {
                     },
                     {
                         $lookup: {
-                            from: 'items', // name of the Items collection in your database
+                            from: 'items',
                             localField: 'itemId',
                             foreignField: '_id',
                             as: 'item',
@@ -68,7 +68,7 @@ const orderResolvers = {
                     },
                     {
                         $lookup: {
-                            from: 'users', // name of the User collection in your database
+                            from: 'users',
                             localField: 'userId',
                             foreignField: '_id',
                             as: 'user',
@@ -76,7 +76,7 @@ const orderResolvers = {
                     },
                     {
                         $lookup: {
-                            from: 'items', // name of the Items collection in your database
+                            from: 'items', 
                             localField: 'itemId',
                             foreignField: '_id',
                             as: 'item',
